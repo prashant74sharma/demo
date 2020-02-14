@@ -1,0 +1,25 @@
+package com.capgemini.medicalstoremangement.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.capgemini.medicalstoremanagement.factory.MedicalFactory;
+import com.capgemini.medicalstoremanagement.service.impl.VisitorServiceImp;
+import com.capgemini.medicalstoremangement.dao.impl.VisitorDAOImp;
+import com.capgemini.medicalstoremangement.service.VisitorService;
+
+class VisitorDAOTest {
+VisitorService d = MedicalFactory.getInstance();
+
+	@Test
+	void detailstest() {
+   d.detailsInfo();
+	}
+	
+	@Test
+	void medicineDetailTest() {
+		d.medicineInfo();
+	}
+
+}
