@@ -1,0 +1,26 @@
+package com.capgemini.medicalstoremangement.dao.impl;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.capgemini.medicalstoremangement.dto.MedicinePojo;
+
+class AdminDAOImpTest {
+ AdminDAOImp dao = new AdminDAOImp();
+ 
+	
+	@Test
+	void delMedicineTest() {
+     dao.deleteMedicine("scott");		
+	}
+	@Test
+   void deleteUserTest() {
+		dao.deleteUser("tyler");
+	}
+	@Test
+	void replyMessageTest() {
+	dao.replyMessage("String", 202);
+	}
+
+}
