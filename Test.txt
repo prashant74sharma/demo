@@ -1,0 +1,42 @@
+package com.capgemini.medicalstoremangement.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.capgemini.medicalstoremanagement.factory.MedicalFactory;
+import com.capgemini.medicalstoremangement.dao.impl.UserDAOImp;
+
+import junit.framework.TestCase;
+
+class UserDAOTest {
+UserDAO d = MedicalFactory.searchingForMedicine();
+	@Test
+	void loginTest() {
+		d.loginUser("scott", "scott");
+	}
+	
+	@Test
+	void changePasswordTest() {
+		d.changePassword("scott", 202);
+	}
+	@Test
+	void addCartTest() {
+		d.addingToCart("feron", 2);
+	}
+	@Test
+	void deleteCartTest() {
+		d.deletingFromCart("Feron");
+	}
+	@Test
+	void placeOrderTest() {
+		d.placeOrder("Dolo");
+	}
+	@Test
+	void amoutTest() {
+		String srt = d.totalAmount();
+		TestCase.assertEquals("", "");
+	}
+	
+    
+}
